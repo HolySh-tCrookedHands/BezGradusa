@@ -15,8 +15,13 @@ templates = Jinja2Templates(directory=tempPath)
 app.mount("/static", StaticFiles(directory=staticPath), name="static")
 
 @app.get("/home", response_class=HTMLResponse)
-def serve_home(request: Request):
+def home(request: Request):
     return templates.TemplateResponse("index.html", context={"request": request})
+
+@app.get('/catalog')
+def catalog(request:Request):
+    return templates.TemplateResponse('catalog.html', context={"request": request})
+
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)

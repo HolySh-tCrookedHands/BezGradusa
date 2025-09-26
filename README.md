@@ -16,8 +16,8 @@
 ---
 
 ## ⚙️ Технологии
-- **Frontend:** React / Vue (обсуждается)  
-- **Backend:** Python (FastAPI / Django)  
+- **Frontend:** HTML CSS JS  
+- **Backend:** Python FastAPI  
 - **База данных:** PostgreSQL  
 - **Инфраструктура:** GitHub, Docker, CI/CD  
 

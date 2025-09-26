@@ -13,12 +13,13 @@
 .brand {
     display: inline-flex;
 }
-.brand h1 {
+.brand-text{
     margin-top: auto;
     margin-bottom: auto;
 }
 
 .barnd-and-nav {
+    padding: 10px;
     display: flex;
     width: auto;
 }

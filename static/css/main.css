@@ -1,0 +1,46 @@
+:root {
+    --color1: #12223f;
+    --color2: #363f6d;
+    --color3: #7a6bab;
+    --color4: #cc95e9;
+    --color5: #f8bced;
+}
+
+body {
+    background-color: var(--color2);
+}
+
+nav {
+    background-color: var(--color1);
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 2px black;
+    color:white;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.list_item {
+    display: inline;
+}
+
+.item {
+    display: inline-block; /* чтобы трансформация работала как надо */
+    border: solid 2px var(--color3);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--color5);
+    transition: padding 0.3s ease; /* плавная анимация */
+    margin-right: 10px;
+}
+
+.item:hover { 
+    padding: 15px; /* увеличиваем на 10% */
+}
+
+.item a {
+    text-decoration: none;
+    color: var(--color1);
+    font-size: 20px;
+}
+

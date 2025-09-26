@@ -3,7 +3,7 @@ import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
 
 BASE_DIR = os.path.dirname(__file__)
 tempPath = os.path.join(BASE_DIR, "templates")
@@ -13,6 +13,11 @@ app = FastAPI()
 
 templates = Jinja2Templates(directory=tempPath)
 app.mount("/static", StaticFiles(directory=staticPath), name="static")
+
+
+@app.get('/')
+def go_home(request:Request):
+    return RedirectResponse('/home')
 
 @app.get("/home", response_class=HTMLResponse)
 def home(request: Request):

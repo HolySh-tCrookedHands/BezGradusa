@@ -1,48 +1,81 @@
 :root {
-    --color1: #12223f;
-    --color1-1: #12223fe9;
-    --color2: #363f6d;
-    --color3: #7a6bab;
-    --color4: #cc95e9;
-    --color5: #f8bced;
+    --color1: #12223f;      /* тёмный фон */
+    --color1-1: #12223fe9;  /* полупрозрачный */
+    --color2: #363f6d;      /* общий фон */
+    --color3: #7a6bab;      /* акцентный (фиолетовый) */
+    --color4: #cc95e9;      /* светло-фиолетовый */
+    --color5: #f8bced;      /* розоватый для кнопок */
 }
 
 body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
     background-color: var(--color2);
     background-image: url("/static/image/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
 }
 
+/* NAVBAR */
 nav {
-    background-color: var(--color1-1);
-    padding: 20px;
-    border-radius: 10px;
-    border: solid 2px black;
-    color:white;
-    margin-bottom: 10px;
+    background: rgba(18, 34, 63, 0.85); /* полупрозрачный */
+    padding: 15px 0;
+    border-radius: 12px;
+    margin: 10px auto;
     text-align: center;
+    backdrop-filter: blur(10px); /* эффект размылевания для нувбара */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    width: 95%;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 28px;
+    color: var(--color5);
+    letter-spacing: 2px;
+}
+
+nav h2 {
+    margin: 8px 0 15px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ddd;
 }
 
 .list_item {
-    display: inline;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .item {
-    display: inline-block; /* чтобы трансформация работала как надо */
-    border: solid 2px var(--color3);
-    padding: 10px;
-    border-radius: 10px;
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 12px;
     background-color: var(--color5);
-    transition: padding 0.3s ease; /* плавная анимация */
-    margin-right: 10px;
+    border: 2px solid var(--color3);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 6px var(--color3);
 }
 
-.item:hover { 
-    padding: 15px; /* увеличиваем на 10% */
+.item:hover {
+    background-color: var(--color4);
+    box-shadow: 0 0 15px var(--color4), 0 0 25px var(--color5);
+    transform: translateY(-3px);
 }
 
 .item a {
     text-decoration: none;
     color: var(--color1);
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+.item:hover a {
+    color: #fff;
+}

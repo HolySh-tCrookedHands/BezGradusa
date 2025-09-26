@@ -7,11 +7,17 @@
     --color5: #f8bced;
 }
 
+@font-face {
+  font-family: "Neon";  
+  src: url("/static/fonts/Neon.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+} 
+
 body {
     background-color: var(--color2);
     background-image: url("/static/image/background.jpg");
 }
-
 nav {
     background-color: var(--color1-1);
     padding: 20px;
@@ -19,13 +25,14 @@ nav {
     border: solid 2px black;
     color:white;
     margin-bottom: 10px;
-    text-align: center;
+    text-align: left;
 }
-
+nav h1 {
+    font-family: 'Neon';
+}
 .list_item {
     display: inline;
 }
-
 .item {
     display: inline-block; /* чтобы трансформация работала как надо */
     border: solid 2px var(--color3);
@@ -35,14 +42,26 @@ nav {
     transition: padding 0.3s ease; /* плавная анимация */
     margin-right: 10px;
 }
-
 .item:hover { 
     padding: 15px; /* увеличиваем на 10% */
 }
-
 .item a {
     text-decoration: none;
     color: var(--color1);
     font-size: 20px;
 }
 
+.title {
+    font-size: 25px;
+    width: 500px;
+    text-align: center;
+}
+
+
+.background-1 {
+    background-color: var(--color3);
+}
+.border-1{border: solid 2px var(--color1);}
+.round-1 {border-radius: 10px;}
+.round-2 {border-radius: 20px;}
+.round-3 {border-radius: 30px;}

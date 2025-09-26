@@ -1,8 +1,59 @@
 .row {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 
 .col {
     display: flexbox;
-    flex: auto;
+    flex: 100%;   
+}
+
+.brand {
+    display: inline-flex;
+}
+.brand-text{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.barnd-and-nav {
+    padding: 10px;
+    display: flex;
+    width: auto;
+}
+.nav-button {
+    margin-left:auto; 
+    margin-top:auto; 
+    margin-bottom:auto; 
+}
+
+.col-1 {flex: 10%;}
+.col-2 {flex: 20%;}
+.col-3 {flex: 30%;}
+.col-4 {flex: 40%;}
+.col-5 {flex: 50%;}
+.col-6 {flex: 60%;}
+.col-7 {flex: 70%;}
+.col-8 {flex: 80%;}
+.col-9 {flex: 90%;}
+
+.p-1 {padding: 10px;}
+.p-2 {padding: 20px;}
+.p-3 {padding: 30px;}
+.p-4 {padding: 40px;}
+.p-5 {padding: 50px;}
+.p-6 {padding: 60px;}
+.p-7 {padding: 70px;}
+.p-8 {padding: 80px;}
+.p-9 {padding: 90px;}
+
+
+
+.image-line {
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 2px var(--color1);
+    border-radius: 10px;
 }

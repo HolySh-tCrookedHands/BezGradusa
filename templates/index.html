@@ -2,21 +2,54 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/static/css/main.css">
         <link rel="stylesheet" href="/static/css/layout.css">
         <title>Главная</title>
     </head>
     <body>
-        {% include 'widget/navbar.html' %}
-        <div class="mainBlock">
+        <header>
+            {% include 'widget/navbar.html' %}
+        </header>
+        <main>
+            <!-- цель проекта -->
+            <div class="row background-1 round-1 border-1"> 
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col">
+                        <h1 class="title">
+                            Цель проекта
+                        </h1>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row"></div>
+            </div>
+            <!-- о нас -->
             <div class="row">
                 <div class="col">
-                    {% with title='dasdsa', info='dasda', button='dasdas' %}
-                        {% include 'widget/card.html' %}
-                    {% endwith %}
+                
                 </div>
             </div>
-        </div>
+            <!-- Кто мы -->
+            <div class="row">
+                <div class="col">
+                
+                </div>
+                <div class="col">
+                
+                </div>
+                <div class="col">
+                
+                </div>
+                <div class="col">
+                
+                </div>
+            </div>
+            <!-- Почему стоит брать именно у нас? -->
+            <div class="row">
+                <div class="col"></div>
+            </div>
+        </main>
     </body>
 </html>

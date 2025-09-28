@@ -18,7 +18,6 @@ body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: var(--color2);
-    background-image: url("/static/image/background.jpg");
     background-size: cover;
     background-attachment: fixed;
     color: white;
@@ -88,9 +87,9 @@ nav h2 {
 }
 
 
-.background-1 {
-    background-color: var(--color3);
-}
+.background-1 {background-color: var(--color3);}
+.background-2 {background-color: var(--color2);}
+
 .border-1{border: solid 2px var(--color1);}
 .round-1 {border-radius: 10px;}
 .round-2 {border-radius: 20px;}

@@ -1,48 +1,38 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/static/css/main.css">
-        <link rel="stylesheet" href="/static/css/layout.css">
-        <link rel="stylesheet" href="/static/css/blockStyle.css">
-        <link rel="icon" href="/static/image/icon/3700460-cafe-coffee-cup-drink-hot-mug-shop_108752.ico">
-        <title>Главная</title>
-    </head>
-    <body>
-        <header>
-            {% include 'widget/navbar.html' %}
-        </header>
-        <main>
-            <!-- цель проекта -->
-            <div class="background-1 round-1 border-1 block"> 
-                <div class="row">
-                    <div class="col">
-                        <h1 class="block-title">
-                           Цели проекта
-                           <hr>
-                        </h1>
-                    </div>
-                </div>
-                <div class="row p-4">
-                    <div class="col-6">
-                        <span class="block-text">
-                            <p>
-                                BezGradusa - надежный поставшик без алкогольных напитков для сетей магазинов.<br>
-                                Все наши товары проходят строгий контроль и верефикацию. 
-                            </p>
-                            <p>
-                                BezGradusa компацния надежныж жидкостей на РФ рынке №1<br>
-                                Наша компания хоть и молода но уже получила массу наград на всяко разных конкураса.<br>
-                            </p>
-                        </span>
-                    </div>
-                    <div class="col-3">
-                        <img src="/static/image/limonadik.png" width="500px" alt="лимонад 1">
-                    </div>
-                </div>
+{% extends 'base.html' %}
+
+{% block title %}
+    Главная BezGradusa
+{% endblock %}
+
+{% block main %}
+    <!-- цель проекта -->
+    <div class="background-1 round-1 border-1 block"> 
+        <div class="row">
+            <div class="col">
+                <h1 class="block-title">
+                    Цели проекта
+                    <hr>
+                </h1>
             </div>
-            <!-- <div class="row background-1 round-1 border-1 block"></div> -->
-        </main>
-    </body>
-</html>
+        </div>
+        <div class="row p-4">
+            <div class="col-6">
+                <span class="block-text">
+                    <p>
+                        BezGradusa - надежный поставшик без алкогольных напитков для сетей магазинов.<br>
+                        Все наши товары проходят строгий контроль и верефикацию. 
+                    </p>
+                    <p>
+                        BezGradusa компацния надежныж жидкостей на РФ рынке №1<br>
+                        Наша компания хоть и молода но уже получила массу наград на всяко разных конкураса.<br>
+                    </p>
+                </span>
+            </div>
+            <div class="col-3">
+                <img src="/static/image/limonadik.png" width="500px" alt="лимонад 1">
+            </div>
+        </div>
+    </div>
+    <!-- <div class="row background-1 round-1 border-1 block"></div> -->
+
+{% endblock %}

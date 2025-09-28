@@ -8,21 +8,21 @@
   --color5: #f8bced;        /* розоватый цвет для кнопок и акцентов */
 }
 
+@font-face {
+  font-family: "Neon";  
+  src: url("/static/fonts/Neon.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+} 
+
 /* ==== Общие стили страницы ==== */
 body {
   margin: 0;                             /* убираем отступы вокруг страницы */
   font-family: 'Montserrat', sans-serif; /* задаём шрифт текста */
   background-color: var(--color2);       /* цвет фона страницы */
-  background-image: url("/static/image/background.jpg"); /* фон-картинка */
   background-size: cover;                /* растягиваем картинку на весь экран */
   background-attachment: fixed;          /* фон остаётся на месте при скролле */
   color: white;                          /* цвет текста по умолчанию */
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--color2);
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
 }
 
 /* ==== Навигационная панель ==== */
@@ -41,6 +41,7 @@ nav {
 nav h1 {
   margin: 0;                             /* убираем внешние отступы */
   font-size: 28px;                       /* размер шрифта */
+  font-family: 'Neon';                       /* кастомный шрифт */
   color: var(--color5);                  /* цвет текста (розовый) */
   letter-spacing: 2px;                   /* расстояние между буквами */
 }

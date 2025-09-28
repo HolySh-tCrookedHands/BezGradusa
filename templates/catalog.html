@@ -1,21 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width initial-scale=1.0">
-        <link rel="stylesheet" href="/static/css/main.css">
-        <link rel="stylesheet" href='/static/css/layout.css'>
-        <title>Каталог</title>
-    </head>
-    <body>
-        <header>
-            {% include "widget/navbar.html" %}
-        </header>
-        <main>
-            Контент
-        </main>
-        <footer>
-            Подвал
-        </footer>
-    </body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}
+    Каталог
+{% endblock %}

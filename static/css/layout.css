@@ -50,6 +50,11 @@
 .p-9 {padding: 90px;}
 
 
+.block {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .image-line {
     margin-left: auto;

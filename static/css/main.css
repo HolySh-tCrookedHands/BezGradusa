@@ -17,6 +17,12 @@ body {
   background-size: cover;                /* растягиваем картинку на весь экран */
   background-attachment: fixed;          /* фон остаётся на месте при скролле */
   color: white;                          /* цвет текста по умолчанию */
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color2);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
 }
 
 /* ==== Навигационная панель ==== */
@@ -159,3 +165,11 @@ footer {
     color: #aaa; /* серый цвет — не отвлекает */
 }
 
+
+.background-1 {background-color: var(--color3);}
+.background-2 {background-color: var(--color2);}
+
+.border-1{border: solid 2px var(--color1);}
+.round-1 {border-radius: 10px;}
+.round-2 {border-radius: 20px;}
+.round-3 {border-radius: 30px;}

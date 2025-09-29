@@ -27,6 +27,13 @@ def home(request: Request):
 def catalog(request:Request):
     return templates.TemplateResponse('catalog.html', context={"request": request})
 
+@app.get('/auth')
+def reg(request:Request, action: str = None):
+    if action == 'login':
+        return templates.TemplateResponse("authPage.html", context={"request": request, 'show':'login'})
+    else:
+        return templates.TemplateResponse("authPage.html", context={"request": request, 'show':'reg'})
+
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)

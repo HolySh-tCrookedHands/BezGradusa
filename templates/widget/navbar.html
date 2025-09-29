@@ -14,19 +14,12 @@
                     <li class="navBtn"><a href="/catalog">Каталог</a></li>
                     <li class="navBtn"><a href="#">Для партнёров</a></li>
                     <li class="navBtn"><a href="#">О нас</a></li>
-                    <li class="navBtn"><a href="#">🛒 Корзина</a></li>
-                </ul>
-            </div>
-            <div class="row">
-                <div class="col"></div>
-                <div class="row">
-                    <div class="col">
+                    {% if notAuth == True %}
                         <a class="LoginRegBtn" href="/auth?action=login" target="_self">Вход\Регистрация</a>
-                    </div>
-                    <div class="col m-1">
-                        <button id="theme-toggle" class="LoginRegBtn" aria-pressed="false" aria-label="Переключить тему" title="Тема">🌙</button>
-                    </div>
-                </div>
+                    {% else %}
+                        <li class="navBtn"><a href="#">🛒 Корзина</a></li>
+                    {% endif %}
+                </ul>
             </div>
         </div>
     </div>

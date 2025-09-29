@@ -64,6 +64,8 @@
     width: 95%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
+    padding: 30px;
 }
 
 .image-line {

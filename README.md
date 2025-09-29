@@ -18,7 +18,7 @@
 ## ⚙️ Технологии
 - **Frontend:** HTML CSS JS  
 - **Backend:** Python FastAPI  
-- **База данных:** PostgreSQL  
+- **База данных:** SQLite3
 - **Инфраструктура:** GitHub, Docker, CI/CD  
 
 ---
@@ -26,8 +26,8 @@
 ## 🔧 Как запустить проект (локально)
 ```bash
 # клонируем репозиторий
-git clone https://github.com/ORGANIZATION/REPO.git
-cd REPO
+git clone https://github.com/HolySh-tCrookedHands/BezGradusa.git
+cd BezGradusa
 
 # установка зависимостей (пример)
 pip install -r requirements.txt

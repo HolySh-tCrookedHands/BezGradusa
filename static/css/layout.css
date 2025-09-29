@@ -29,6 +29,10 @@
     margin-bottom:auto; 
 }
 
+.nav-button .row {
+    margin-top: 10px;
+}
+
 .col-1 {flex: 10%;}
 .col-2 {flex: 20%;}
 .col-3 {flex: 30%;}
@@ -49,11 +53,19 @@
 .p-8 {padding: 80px;}
 .p-9 {padding: 90px;}
 
+.m-1 {margin: 10px;}
+.m-2 {margin: 20px;}
+.m-3 {margin: 30px;}
+.m-4 {margin: 40px;}
+.m-5 {margin: 50px;}
+
 
 .block {
     width: 95%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
+    padding: 30px;
 }
 
 .image-line {

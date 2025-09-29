@@ -4,35 +4,149 @@
     Главная BezGradusa
 {% endblock %}
 
+
+
+{% from 'widget/card.html' import card %}
 {% block main %}
     <!-- цель проекта -->
     <div class="background-1 round-1 border-1 block"> 
-        <div class="row">
-            <div class="col">
-                <h1 class="block-title">
-                    Цели проекта
-                    <hr>
-                </h1>
+        <section class="catalog-preview">
+            <h1>Безалкогольные напитки</h1>
+            <div class="quick-categories">
+                {{ 
+                    card(
+                        title="Энергетики",
+                        img="/static/image/monster_energy.png"
+                    ) 
+                }}
+                {{ 
+                    card(
+                        title="Лимонады",
+                        img="/static/image/limonadiki.jpg"
+                    ) 
+                }}
+                {{ 
+                    card(
+                        title="Холодный чай",
+                        img="/static/image/lipton.jpg"
+                    ) 
+                }}
+                {{ 
+                    card(
+                        title="Газированные",
+                        img="/static/image/gaziki.jpg"
+                    ) 
+                }}
+                {{ 
+                    card(
+                        title="Всё",
+                        img="/static/image/gazirovki.png"
+                    ) 
+                }}
             </div>
-        </div>
-        <div class="row p-4">
-            <div class="col-6">
-                <span class="block-text">
-                    <p>
-                        BezGradusa - надежный поставшик без алкогольных напитков для сетей магазинов.<br>
-                        Все наши товары проходят строгий контроль и верефикацию. 
-                    </p>
-                    <p>
-                        BezGradusa компацния надежныж жидкостей на РФ рынке №1<br>
-                        Наша компания хоть и молода но уже получила массу наград на всяко разных конкураса.<br>
-                    </p>
-                </span>
-            </div>
-            <div class="col-3">
-                <img src="/static/image/limonadik.png" width="500px" alt="лимонад 1">
-            </div>
-        </div>
+        </section>
     </div>
-    <!-- <div class="row background-1 round-1 border-1 block"></div> -->
+    <div class="background-1 round-1 border-1 block">
+        <section class="search-section">
+            <div class="search-bar">
+                <input type="text" placeholder="Поиск напитков..." id="searchInput">
+                <button onclick="searchProducts()">Найти</button>
+            </div>
+            <div class="quick-filters">
+                <a href="/catalog?filter=new">Новинки</a>
+                <a href="/catalog?filter=popular">Популярные</a>
+                <a href="/catalog?filter=sale">Акции</a>
+                <a href="/catalog?filter=bestsellers">Хиты продаж</a>
+            </div>
+        </section>
+    </div>
+    <div class="background-1 round-1 border-1 block">
+        <section class="new-arrivals">
+            <h2>Новые поступления</h2>
+            <div class="products-grid">
+                {% for product in new_products %}
+                <div class="product-card">
+                    <img src="{{ product.image }}" alt="{{ product.name }}">
+                    <h3>{{ product.name }}</h3>
+                    <p class="price">{{ product.price }} ₽</p>
+                    <button onclick="">В корзину</button>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="view-all">
+                <a href="/catalog?filter=new" class="btn-secondary">Все новинки →</a>
+            </div>
+        </section>
+    </div>
+    <div class="background-1 round-1 border-1 block">
+        <section class="sale-products">
+            <h2>Акции и скидки</h2>
+            <div class="products-grid">
+                {% for product in sale_products %}
+                <div class="product-card sale">
+                    <div class="sale-badge">-{{ product.discount }}%</div>
+                    <img src="{{ product.image }}" alt="{{ product.name }}">
+                    <h3>{{ product.name }}</h3>
+                    <p class="price">
+                        <span class="old-price">{{ product.old_price }} ₽</span>
+                        {{ product.price }} ₽
+                    </p>
+                    <button onclick="">В корзину</button>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+    <div class="background-1 round-1 border-1 block">
+        <section class="quick-links">
+            <div class="row">
+                <div class="col">
+                    <div class="link-card">
+                        <h3>Для партнёров</h3>
+                        <p>Оптовые поставки для ресторанов и магазинов</p>
+                        <a href="/partners" class="btn-outline">Подробнее</a>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="link-card">
+                        <h3>О компании</h3>
+                        <p>Узнайте больше о нашей миссии и ценностях</p>
+                        <a href="/about" class="btn-outline">О нас</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="background-1 round-1 border-1 block">
+        <section class="delivery-info">
+            <h2>Условия доставки</h2>
+            <div class="info-cards">
+                <div class="row">
+                    <div class="col">
+                        <div class="info-card">
+                            <h1>🚗</h1>
+                            <h4>Быстрая доставка</h4>
+                            <p>Привезем за 2 часа в пределах города</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="info-card">
+                            <h1>💳</h1>
+                            <h4>Удобная оплата</h4>
+                            <p>Наличные, карта, онлайн</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="info-card">
+                            <h1>📦</h1>
+                            <h4>Самовывоз</h4>
+                            <p>Заберите заказ из нашего магазина</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
 {% endblock %}

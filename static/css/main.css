@@ -174,3 +174,270 @@ footer {
 .round-1 {border-radius: 10px;}
 .round-2 {border-radius: 20px;}
 .round-3 {border-radius: 30px;}
+/* карточки */ 
+.catalog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px; /* расстояние между карточками */
+    padding: 50px 20px; /* отступ сверху и по бокам */
+    max-width: 1200px;
+    margin: 0 auto; /* по центру */
+}
+
+.card {
+    background: var(--color1-1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px); /* чуть поднимается при наведении */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* картинка не растягивается, а обрезается красиво */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    color: var(--color5);
+}
+
+.card p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color4);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.card button {
+    background: var(--color3);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: var(--color4);
+}
+/* ==== Кнопки вход/регистрация ==== */
+.neon-btn {
+  margin-left: 10px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid var(--color3);
+  box-shadow: 0 0 10px var(--color5), 0 0 20px var(--color4);
+}
+
+.neon-btn.login {
+  background: var(--color5);
+  color: var(--color1);
+}
+
+.neon-btn.register {
+  background: var(--color3);
+  color: white;
+}
+
+.neon-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px var(--color4), 0 0 30px var(--color5);
+}
+
+/* ==== Переключатель темы ==== */
+.theme-toggle {
+  margin-left: 15px;
+  font-size: 20px;
+  padding: 8px 12px;
+  border-radius: 50%;
+  background: var(--color5);
+  border: 2px solid var(--color3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px var(--color4), 0 0 15px var(--color5);
+}
+
+.theme-toggle:hover {
+  background: var(--color4);
+  color: white;
+  box-shadow: 0 0 20px var(--color4), 0 0 30px var(--color5);
+}
+
+/* ==== Светлая тема ==== */
+body.light-theme {
+  background-color: #fdfdfd;
+  color: var(--color1);
+}
+
+body.light-theme nav {
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--color1);
+}
+
+body.light-theme .item {
+  background-color: var(--color3);
+  border-color: var(--color5);
+}
+
+body.light-theme .item a {
+  color: #fff;
+}
+
+body.light-theme footer {
+  background: rgba(240,240,240,0.95);
+  color: var(--color1);
+}
+.nav-auth {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 12px;
+}
+
+.neon-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+  cursor: pointer;
+}
+
+.neon-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  z-index: -1;
+  filter: blur(14px);
+  opacity: 0.9;
+  transition: opacity 0.2s ease, transform 0.3s ease;
+}
+
+.neon-btn.login {
+  color: var(--color1);
+  background: linear-gradient(135deg, #ffffff, #ffeef8);
+  box-shadow: 0 6px 18px rgba(248,188,237,0.18), 0 0 6px rgba(122,107,171,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.neon-btn.login::after {
+  background: linear-gradient(90deg, rgba(248,188,237,0.25), rgba(122,107,171,0.08));
+}
+
+.neon-btn.register {
+  background: linear-gradient(135deg, #7a6bab, #624e9a);
+  color: #fff;
+  box-shadow: 0 8px 28px rgba(122,107,171,0.28), 0 0 30px rgba(204,149,233,0.09);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.neon-btn.register::after {
+  background: linear-gradient(90deg, rgba(122,107,171,0.36), rgba(52,152,219,0.06));
+}
+
+.neon-btn:hover { transform: translateY(-4px); filter: saturate(1.05); }
+.neon-btn:active { transform: translateY(-2px) scale(0.995); }
+
+/* Переключатель темы */
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  font-size: 18px;
+  background: linear-gradient(180deg, #f8bced, #cc95e9);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 6px 20px rgba(204,149,233,0.18), 0 0 10px rgba(122,107,171,0.08);
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.theme-toggle:hover { transform: translateY(-3px); }
+
+/* Усиленный неон */
+.neon-mode .neon-btn.login::after,
+.neon-mode .neon-btn.register::after {
+  filter: blur(20px);
+  transform: scale(1.05);
+  opacity: 1;
+}
+.neon-mode .neon-btn {
+  text-shadow: 0 0 8px rgba(255,255,255,0.06);
+}
+.neon-mode .neon-btn.register {
+  box-shadow: 0 10px 40px rgba(122,107,171,0.45), 0 0 60px rgba(122,107,171,0.18);
+}
+.neon-mode .neon-btn.login {
+  box-shadow: 0 10px 40px rgba(248,188,237,0.45), 0 0 50px rgba(248,188,237,0.14);
+}
+.neon-mode .theme-toggle {
+  box-shadow: 0 10px 30px rgba(204,149,233,0.32), 0 0 40px rgba(122,107,171,0.15);
+}
+
+/* Светлая тема */
+body.light-theme {
+  background-color: #fdfdfd;
+  color: var(--color1);
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+body.light-theme nav {
+  background: rgba(255,255,255,0.92);
+  color: var(--color1);
+}
+body.light-theme footer {
+  background: rgba(245,245,245,0.95);
+  color: var(--color1);
+}
+
+/* Неоновые инпуты */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+  color: inherit;
+  outline: none;
+  transition: box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+input:focus, textarea:focus {
+  box-shadow: 0 6px 30px rgba(122,107,171,0.18), 0 0 12px rgba(204,149,233,0.12);
+  border-color: rgba(122,107,171,0.6);
+  background: rgba(255,255,255,0.04);
+}
+
+/* Мобильная адаптация */
+@media (max-width: 680px) {
+  .nav-button { display: none; }
+  .nav-auth { gap: 8px; }
+  .neon-btn { padding: 8px 12px; font-size: 14px; }
+}

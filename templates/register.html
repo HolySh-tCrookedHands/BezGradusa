@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} Регистрация {% endblock %}
+
+{% block main %}
+<div class="block background-1 round-2 border-1 p-4">
+  <h1 class="block-title">Регистрация <hr></h1>
+  <form method="post" action="/register">
+    <input type="text" placeholder="Логин" required><br><br>
+    <input type="email" placeholder="Email" required><br><br>
+    <input type="password" placeholder="Пароль" required><br><br>
+    <button type="submit" class="neon-btn register">Зарегистрироваться</button>
+  </form>
+</div>
+{% endblock %}

@@ -14,11 +14,110 @@
     margin-bottom: 10px;
 }
 
+.search-bar input[type="text"], textarea {
+  border: 1px solid var(--inputBorder);
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--inputBackground);
+  color: inherit;
+  outline: none;
+  width: 93%;
+  font-size: 25px;
+  color:black;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+
+.search-bar input:focus, textarea:focus {
+  box-shadow: 0 6px 30px var(--inputBorder), 0 0 12px var(--inputBackground);
+  border-color: rgba(42, 39, 51, 0.6);
+  background: var(--inputBackgroundHover);
+  transform: translateY(-3px);
+  color:white;
+}
+
+.search-bar button {
+    padding: 13px;
+    width: 5%;
+    font-size: 25px;
+    background-color: var(--ButtonColor);
+    border: solid 2px var(--borderColor);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.18s ease, box-shadow 0.18s ease, padding 0.18s ease;
+}
+
+.search-bar button:hover{
+    background-color: var(--ButtonColorHover);
+    padding: 15px;
+    box-shadow: 0 0 15px var(--ButtonColor), 0 0 25px var(--ButtonColorHover);
+}
+
+.quick-filters  {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.quick-filters a {
+    display: inline-block;
+    padding: 10px;
+    border: solid 2px var(--borderColor);
+    background-color: var(--ButtonColor);
+    text-decoration: none;
+    color: wheat;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.quick-filters a:hover {
+    padding: 14px;
+    box-shadow: 0 0 15px var(--ButtonColor), 0 0 25px var(--ButtonColorHover);
+}
 
 .delivery-info h2 {
     text-align: center;
+    font-size: 30px;
+}
+
+.delivery-info .info-cards {
+    margin-top: 20px;
 }
 
 .delivery-info .info-card {
+    border: solid 2px var(--borderColor);
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-color: var(--cardBackground);
+    border-radius: 20px;
+    height: 400px;
+    transition: all 0.3s ease;
+}
+
+.delivery-info .info-card:hover {
+    padding: 15px;
+    box-shadow: 0 0 25px var(--cardShadow), 0 0 35px var(--cardHoverShadow);
+}
+
+.info-card h1, h4, p {
     text-align: center;
+}
+
+.info-card h1 {
+    font-size: 45px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.info-card h4 {
+    font-size: 35px;
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+.info-card p {
+    font-size: 25px;
 }

@@ -1,15 +1,39 @@
 /* ==== Переменные цветов ==== */
 :root {
-  --color1: #1F1F1F;        /* тёмный фон для текста */
-  --color1-1: #1f1f1f82;    /* полупрозрачный тёмный фон */
-  --color2: #818181;        /* основной фон страницы */
-  --color3: #AA393D;        /* акцентный цвет (тёмно-фиолетовый) */
-  --color4: #444444;        /* светлый акцент (для hover) */
-  --color5: #818181;        /* яркий цвет для кнопок и акцентов */
-  --colorButtonLogin: #28a745; /* зелёная кнопка */
-  --colorButtonLoginHover: #3cd65a;
-  --colorButtonReg: var(--color5); /* розово-фиолетовая кнопка */
-  --colorButtonRegHover: var(--color4);
+  --pageBackground: #222629 ; /* фон страницы */
+
+  --navBackground: #373a3dc5 ; /* фон navbar */
+  --navAccent: #7c8085; /* акцентный navbar */
+  
+  --footerBackground: #373a3dc5 ; /* фон footer */
+  --footerAccent: #050505c5;
+  --footerLink: #ffffff ;
+
+  --ButtonColor: #61892F; /* цвет кнопок */
+  --ButtonAColor: #f9fdff; /* цвет для текста внутри a*/
+  --ButtonColorHover: #86C232; /* цвет кнопок при навидении */
+
+  --ButtonRegLogin: #3B945E; /* цвет кнопок при навидении */
+  --ButtonRegLoginHover: #57BA98; /* цвет кнопок при навидении */
+  
+  --BlocksColor: #474B4F; /* фон для блоков */
+  --BlocksColorAcent: #6B6E70; /* акцнеты для блоков */
+  
+  --borderColor: #222629; /* цвет border */
+  --borderColorBlack: #000000; /* цвет border */
+  --shadowColor: #101010d0; /* цвет для теней */
+
+
+  --cardBackground: #46344E; /* фон для карточек */
+  --cardBorder: #5A5560; /* цвет border */
+  --buttonGradientCard1:#9D8D8F; /* цвет градиента в кнопке 1*/
+  --buttonGradientCard2:#9B786F; /* цвет градиента в кнопке 2*/
+  --cardShadow: #46344E;
+  --cardHoverShadow:#5A5560;
+
+  --inputBorder: #F76C6C;
+  --inputBackground: #A8D0E6;
+  --inputBackgroundHover: #24305E;
 }
 
 /* ==== Шрифты ==== */
@@ -24,27 +48,27 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background: var(--color1);
+  background: var(--pageBackground);
   color: white;
 }
 
 /* ==== Навигационная панель ==== */
 nav {
-  background: var(--color1-1);
+  background: var(--navBackground);
   padding: 15px;
   margin: 10px auto;
   margin-top: 0px;
   text-align: center;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-  border-bottom: 2px solid var(--color3);
+  border-bottom: 2px solid var(--shadowColor);
 }
 
 nav h1 {
   margin: 0;
   font-size: 28px;
   font-family: 'Neon';
-  color: var(--color5);
+  color: var(--navAccent);
   letter-spacing: 2px;
 }
 
@@ -57,10 +81,10 @@ nav h2 {
 
 /* ==== Футер ==== */
 footer {
-  background: var(--color1-1);
+  background: var(--footerBackground);
   color: #fff;
   padding: 40px 20px 20px;
-  border-top: 2px solid var(--color3);
+  border-top: 2px solid var(--borderColor);
   backdrop-filter: blur(10px);
   box-shadow: 0 -4px 15px rgba(0,0,0,0.6);
   margin-top: 20px;
@@ -93,7 +117,7 @@ footer {
 
 .footer-links ul li a {
   text-decoration: none;
-  color: var(--color5);
+  color: var(--footerLink);
   transition: 0.3s;
 }
 
@@ -109,7 +133,7 @@ footer {
 .social-icons a {
   margin-right: 15px;
   font-weight: bold;
-  color: var(--color5);
+  color: var(--footerLink);
   text-decoration: none;
   transition: 0.3s;
 }
@@ -123,17 +147,29 @@ footer {
   text-align: center;
   margin-top: 20px;
   padding-top: 10px;
-  border-top: 1px solid var(--color3);
+  border-top: 1px solid var(--footerAccent);
   font-size: 14px;
   color: #aaa;
 }
 
 /* ==== Дополнительные утилиты ==== */
-.background-1 { background-color: var(--color3); }
-.background-2 { background-color: var(--color2); }
+.background-1 { background-color: var(--BlocksColor); }
+.background-2 { background-color: var(--cardBackground);}
+.background-2 { background-color: var(--ButtonColor);}
 
-.border-1 { border: solid 2px var(--color1); }
+.border-1 { border: solid 2px var(--borderColorBlack); }
 
 .round-1 { border-radius: 10px; }
 .round-2 { border-radius: 20px; }
 .round-3 { border-radius: 30px; }
+
+.a-1 {
+  text-decoration:none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.a-1:hover { 
+  padding:15px; 
+  box-shadow: 0 0 15px var(--ButtonColor), 0 0 25px var(--ButtonColorHover);
+}

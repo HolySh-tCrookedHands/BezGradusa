@@ -59,6 +59,9 @@
 .m-4 {margin: 40px;}
 .m-5 {margin: 50px;}
 
+.aling-block-left {margin-left: auto;}
+.aling-block-right {margin-right: auto;}
+.aling-block-center {margin-left: auto; margin-right: auto;}
 
 .block {
     width: 95%;

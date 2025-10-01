@@ -6,39 +6,39 @@
 
 
 
-{% from 'widget/card.html' import card %}
+{% from 'widget/card.html' import cardOther %}
 {% block main %}
     <!-- цель проекта -->
     <div class="background-1 round-1 border-1 block"> 
         <section class="catalog-preview">
-            <h1>Безалкогольные напитки</h1>
+            <h1>Популярные категории</h1>
             <div class="quick-categories">
                 {{ 
-                    card(
+                    cardOther(
                         title="Энергетики",
                         img="/static/image/monster_energy.png"
                     ) 
                 }}
                 {{ 
-                    card(
+                    cardOther(
                         title="Лимонады",
                         img="/static/image/limonadiki.jpg"
                     ) 
                 }}
                 {{ 
-                    card(
+                    cardOther(
                         title="Холодный чай",
                         img="/static/image/lipton.jpg"
                     ) 
                 }}
                 {{ 
-                    card(
+                    cardOther(
                         title="Газированные",
                         img="/static/image/gaziki.jpg"
                     ) 
                 }}
                 {{ 
-                    card(
+                    cardOther(
                         title="Всё",
                         img="/static/image/gazirovki.png"
                     ) 
@@ -62,7 +62,14 @@
     </div>
     <div class="background-1 round-1 border-1 block">
         <section class="new-arrivals">
-            <h2>Новые поступления</h2>
+            <div class="row">
+                <div class="col">
+                    <h2>Новые поступления</h2>
+                </div>
+                <div class="col-1">
+                    <a href="/catalog?filter=new" class="p-1 border-1 background-2 round-1 a-1">Все новинки →</a>
+                </div>
+            </div>
             <div class="products-grid">
                 {% for product in new_products %}
                 <div class="product-card">
@@ -72,9 +79,6 @@
                     <button onclick="">В корзину</button>
                 </div>
                 {% endfor %}
-            </div>
-            <div class="view-all">
-                <a href="/catalog?filter=new" class="btn-secondary">Все новинки →</a>
             </div>
         </section>
     </div>
@@ -98,29 +102,9 @@
         </section>
     </div>
     <div class="background-1 round-1 border-1 block">
-        <section class="quick-links">
-            <div class="row">
-                <div class="col">
-                    <div class="link-card">
-                        <h3>Для партнёров</h3>
-                        <p>Оптовые поставки для ресторанов и магазинов</p>
-                        <a href="/partners" class="btn-outline">Подробнее</a>
-                    </div>
-                </div>
-                
-                <div class="col">
-                    <div class="link-card">
-                        <h3>О компании</h3>
-                        <p>Узнайте больше о нашей миссии и ценностях</p>
-                        <a href="/about" class="btn-outline">О нас</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <div class="background-1 round-1 border-1 block">
         <section class="delivery-info">
             <h2>Условия доставки</h2>
+            <hr>
             <div class="info-cards">
                 <div class="row">
                     <div class="col">

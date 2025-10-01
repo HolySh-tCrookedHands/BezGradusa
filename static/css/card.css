@@ -1,5 +1,5 @@
 .card {
-    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    background: var(--cardBackground);
     border-radius: 25px;
     padding: 40px 30px;
     width: 100%;
@@ -9,8 +9,8 @@
         0 0 0 1px rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* анимация */
+    border: 1px solid var(--cardBorder);
 }
 
 .card::before {
@@ -31,8 +31,8 @@
 .card:hover {
     transform: translateY(-15px) scale(1.02);
     box-shadow: 
-        0 30px 60px rgba(0, 0, 0, 0.15),
-        0 0 0 1px rgba(255, 255, 255, 0.3);
+        0 30px 60px var(--cardShadow),
+        0 0 0 1px var(--cardHoverShadow);
 }
 
 .card:hover::before {
@@ -90,7 +90,7 @@
 .button a {
     display: inline-block;
     padding: 15px 40px;
-    background: linear-gradient(135deg, #4abdac, #2ecc71);
+    background: linear-gradient(135deg, var(--buttonGradientCard1), var(--buttonGradientCard2));
     color: white;
     text-decoration: none;
     border-radius: 50px;
@@ -99,8 +99,8 @@
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
     box-shadow: 
-        0 5px 15px rgba(74, 189, 172, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        0 5px 15px var(--buttonGradientCard1),
+        inset 0 1px 0 var(--buttonGradientCard2);
     position: relative;
     overflow: hidden;
 }
@@ -122,9 +122,9 @@
 .button a:hover {
     transform: translateY(-3px);
     box-shadow: 
-        0 8px 25px rgba(74, 189, 172, 0.6),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    background: linear-gradient(135deg, #2ecc71, #4abdac);
+        0 8px 25px var(--buttonGradientCard1),
+        inset 0 1px 0 var(--buttonGradientCard2);
+    background: linear-gradient(135deg, var(--buttonGradientCard2), var(--buttonGradientCard1));
 }
 
 .button a:hover::before {
@@ -138,16 +138,6 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-/* Дополнительные декоративные элементы */
-.card::after {
-    content: '⚡';
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2em;
-    opacity: 0.1;
-    animation: float 3s ease-in-out infinite;
-}
 
 @keyframes float {
     0%, 100% { transform: translateY(0) rotate(0deg); }

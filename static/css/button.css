@@ -12,21 +12,21 @@
   display: inline-block;
   padding: 10px 18px;
   border-radius: 12px;
-  background-color: var(--colorButtonReg);
-  border: 2px solid var(--color3);
+  background-color: var(--ButtonColor);
+  border: 2px solid var(--borderColor);
   transition: all 0.3s ease;
-  box-shadow: 0 0 6px var(--color3);
+  box-shadow: 0 0 6px var(--shadowColor);
 }
 
 .navBtn:hover {
-  background-color: var(--colorButtonRegHover);
-  box-shadow: 0 0 15px var(--color4), 0 0 25px var(--color5);
+  background-color: var(--ButtonColorHover);
+  box-shadow: 0 0 15px var(--ButtonColor), 0 0 25px var(--ButtonColorHover);
   transform: translateY(-3px);
 }
 
 .navBtn a {
   text-decoration: none;
-  color: var(--color1);
+  color: var(--ButtonAColor);
   font-size: 18px;
   font-weight: bold;
   transition: color 0.3s ease;
@@ -40,11 +40,11 @@
   display: inline-block;
   padding: 10px 18px;
   border-radius: 12px;
-  background-color: var(--color5); /* был яркий hover → теперь основной фон */
-  border: 2px solid var(--color4); /* контрастная рамка */
-  color: var(--color1);            /* текст тёмный на светлом фоне */
+  background-color: var(--ButtonRegLogin); /* был яркий hover → теперь основной фон */
+  border: 2px solid var(--borderColor); /* контрастная рамка */
   transition: all 0.3s ease;
-  box-shadow: 0 0 6px var(--color4);
+  box-shadow: 0 0 6px var(--shadowColor);
+  color: white;
   text-align: center;
   font-weight: bold;
   text-decoration: none;
@@ -52,8 +52,7 @@
 }
 
 .LoginRegBtn:hover {
-  background-color: var(--color1); /* тёмный фон при hover */
-  color: var(--color5);            /* текст становится ярким */
-  box-shadow: 0 0 15px var(--color5), 0 0 25px var(--color4);
+  background-color: var(--ButtonRegLoginHover); /* тёмный фон при hover */
+  box-shadow: 0 0 15px var(--ButtonRegLogin), 0 0 25px var(--ButtonRegLoginHover);
   transform: translateY(-3px);
 }

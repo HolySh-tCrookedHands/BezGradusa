@@ -85,18 +85,17 @@
     <div class="background-1 round-1 border-1 block">
         <section class="sale-products">
             <h2>Акции и скидки</h2>
-            <div class="products-grid">
+            <div class="block">
                 {% for product in sale_products %}
-                <div class="product-card sale">
-                    <div class="sale-badge">-{{ product.discount }}%</div>
-                    <img src="{{ product.image }}" alt="{{ product.name }}">
-                    <h3>{{ product.name }}</h3>
-                    <p class="price">
-                        <span class="old-price">{{ product.old_price }} ₽</span>
-                        {{ product.price }} ₽
-                    </p>
-                    <button onclick="">В корзину</button>
-                </div>
+                    <div class="product-card sale">
+                        <img src="{{ product.image }}" alt="{{ product.name }}">
+                        <h3>{{ product.name }}</h3>
+                        <p class="price">
+                            <span class="old-price">{{ product.old_price }} ₽</span>
+                            {{ product.price }} ₽
+                        </p>
+                        <button onclick="">В корзину</button>
+                    </div>
                 {% endfor %}
             </div>
         </section>

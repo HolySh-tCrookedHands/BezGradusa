@@ -5,17 +5,94 @@
 {% endblock %}
 
 {% block main %}
-    {% for index in range(6) %}
-        <div class="row">
-            <div class="col">
-                {% include 'widget/card.html' %}
+    <div class="background-1 round-1 border-1 block">
+        <section class="toniki">
+            <h2>Тоники</h2>
+            <div class="block">
+                {% for product in tonik %}
+                    <div class="product-card sale">
+                        <img src="/static/image/{{tonik[index].image }}" alt="{{ tonik[index].title }}">
+                        <h3>{{ tonik[index].title }}</h3>
+                        <h4>{{ tonik[index].info }}</h4>
+                        <p class="price">
+                            {{ tonik[index].price }} ₽
+                        </p>
+                        <button onclick="">В корзину</button>
+                    </div>
+                {% endfor %}
             </div>
-            <div class="col">
-                {% include 'widget/card.html' %}
+        </section>
+    </div>
+    <div class="background-1 round-1 border-1 block">
+        <section class="beer carusel">
+            <h2>Пиво</h2>
+            <div class="block">
+                {% for index in beer %}
+                    <div class="product-card">
+                        <img src="/static/image/{{beer[index].image }}" alt="{{ beer[index].title }}">
+                        <h3>{{ beer[index].title }}</h3>
+                        <h4>{{ beer[index].info }}</h4>
+                        <p class="price">
+                            {{ beer[index].price }} ₽
+                        </p>
+                        <button onclick="">В корзину</button>
+                    </div>
+                {% endfor %}
             </div>
-            <div class="col">
-                {% include 'widget/card.html' %}
+        </section>
+    </div>
+    <div class="background-1 round-1 border-1 block">
+        <section class="gazirovka carusel">
+            <h2>Газировки</h2>
+            <div class="block">
+                {% for index in gazirovka %}
+                    <div class="product-card sale">
+                        <img src="{{ gazirovka[index].image }}" alt="{{ gazirovka[index].title }}">
+                        <h3>{{ gazirovka[index].title }}</h3>
+                        <h4>{{ gazirovka[index].info }}</h4>
+                        <p class="price">
+                            {{ gazirovka[index].price }} ₽
+                        </p>
+                        <button onclick="">В корзину</button>
+                    </div>
+                {% endfor %}
             </div>
-        </div>
-    {% endfor %}
+        </section>
+    </div>
+    <div class="background-1 round-1 border-1 block">
+        <section class="juice-cards carusel">
+            <h2>Соки</h2>
+            <div class="block">
+                {% for index in juice %}
+                    <div class="product-card">
+                        <img src="/static/image/{{juice[index].image }}" alt="{{ juice[index].title }}">
+                        <h3>{{ juice[index].title }}</h3>
+                        <h4>{{ juice[index].info }}</h4>
+                        <p class="price">
+                            {{ juice[index].price }} ₽
+                        </p>
+                        <button onclick="">В корзину</button>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+    <div class="background-1 round-1 border-1 block">
+        <section class="lemonade">
+            <h2>Лимонады</h2>
+            <div class="block">
+                {% for product in lemonade %}
+                    <div class="product-card">
+                        <img src="/static/image/{{ lemonade[product].image }}" alt="{{ lemonade[product].title }}" width="150" height="150">
+                        <h3>{{ lemonade[product].title }}</h3>
+                        <h4>{{ lemonade[product].info }}</h4>
+                        <p class="price">
+                            {{ lemonade[product].price }} ₽
+                        </p>
+                        <button onclick="">В корзину</button>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
 {% endblock %}

@@ -27,7 +27,7 @@
     text-align: center;
 }
 
-.login-form input[type="text"], input[type="email"], input[type="password"], textarea {
+.input-form {
   border: 1px solid rgba(255,255,255,0.12);
   padding: 12px;
   border-radius: 8px;
@@ -37,7 +37,7 @@
   transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
 }
 
-.login-form input:focus, textarea:focus {
+.input-form:focus {
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.18), 0 0 12px rgba(189, 176, 196, 0.12);
   border-color: rgba(42, 39, 51, 0.6);
   background: var(--color1);
